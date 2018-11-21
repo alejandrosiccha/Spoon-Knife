@@ -17,9 +17,11 @@ pipeline {
             }
         }
         stage('Deliver for development') {
+            /*
             when {
                 branch 'development' 
             }
+            */
             steps {
                 //sh './jenkins/scripts/deliver-for-development.sh'
                 echo "deploy DEV from RT"
@@ -29,9 +31,11 @@ pipeline {
             }
         }
         stage('Deploy for production') {
+            /*
             when {
                 branch 'production'  
             }
+            */
             steps {
                 //sh './jenkins/scripts/deploy-for-production.sh'
                 echo "deploy PROD from RT"

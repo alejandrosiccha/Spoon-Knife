@@ -27,7 +27,7 @@ pipeline {
                 echo "deploy DEV from RT"
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 //sh './jenkins/scripts/kill.sh'
-                echo "Finish..."
+                echo "Finish DEV ..."
             }
         }
         stage('Deploy for production') {
@@ -40,7 +40,7 @@ pipeline {
                 //sh './jenkins/scripts/deploy-for-production.sh'
                 echo "deploy PROD from RT"
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                echo "Finish"
+                echo "Finish PROD ..."
                 //sh './jenkins/scripts/kill.sh'
             }
         }

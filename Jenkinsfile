@@ -7,11 +7,13 @@ pipeline {
         stage('Build') {
             steps {
                 //sh 'npm install'
+                echo "Building..."
             }
         }
         stage('Test') {
             steps {
                 //sh './jenkins/scripts/test.sh'
+                echo "Building..."
             }
         }
         stage('Deliver for development') {

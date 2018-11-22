@@ -10,7 +10,7 @@ pipeline {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 sh "#!/bin/bash \n" + 
                     "echo \"Hello from \$SHELL\" \n"+
-                    "scp -r -i  /home/ec2-user/newjenkins.pem /var/lib/jenkins/workspace/Spoon-Knife_master/  ec2-user@ec2-18-218-52-131.us-east-2.compute.amazonaws.com:/home/ec2-user/iis/"
+                    "sudo scp -r -i  /home/ec2-user/newjenkins.pem /var/lib/jenkins/workspace/Spoon-Knife_master/  ec2-user@ec2-18-218-52-131.us-east-2.compute.amazonaws.com:/home/ec2-user/iis/"
                 //sh './home/ec2-user/biuld.sh'
                 echo "Building from RT..."
             }

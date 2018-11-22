@@ -9,7 +9,7 @@ pipeline {
                 //sh 'npm install'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
              // Permission to execute
-                sh "chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}@script"
+                sh "chmod +x -R ${env.WORKSPACE}/${env.JOB_NAME}@script"
 
                 // Call SH
                 sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/script.sh"

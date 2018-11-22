@@ -7,6 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 //sh 'npm install'
+                sh: 'scp -r -i  /home/ec2-user/newjenkins.pem /var/lib/jenkins/workspace/Spoon-Knife_master/  ec2-user@ec2-18-218-52-131.us-east-2.compute.amazonaws.com:/home/ec2-user/iis/'
                 echo "Building from RT..."
             }
         }

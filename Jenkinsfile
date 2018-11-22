@@ -8,7 +8,7 @@ pipeline {
             steps {
                 //sh 'npm install'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                sh: './home/ec2-user/biuld.sh'
+                sh './home/ec2-user/biuld.sh'
                 echo "Building from RT..."
             }
         }

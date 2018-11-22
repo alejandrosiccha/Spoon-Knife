@@ -8,10 +8,12 @@ pipeline {
             steps {
                 //sh 'npm install'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                sh "#!/bin/bash \n" + 
-                    "echo \"Hello from \$SHELL\" \n"+
-                    "sudo scp -r -i  /home/ec2-user/newjenkins.pem /var/lib/jenkins/workspace/Spoon-Knife_master/  ec2-user@ec2-18-218-52-131.us-east-2.compute.amazonaws.com:/home/ec2-user/iis/"
-                //sh './home/ec2-user/biuld.sh'
+             // Permission to execute
+                sh "chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}@script"
+
+                // Call SH
+                sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/script.sh"
+                sh './home/ec2-user/biuld.sh'
                 echo "Building from RT..."
             }
         }

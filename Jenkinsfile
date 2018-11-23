@@ -14,7 +14,7 @@ pipeline {
                 // Call SH
                 //sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/script.sh"
                 
-                sh './jenkins/scripts/biuld.sh'
+                sh './var/lib/jenkins/scripts/biuld.sh'
                 echo "Building from RT..."
             }
         }

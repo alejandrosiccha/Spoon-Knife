@@ -9,11 +9,12 @@ pipeline {
                 //sh 'npm install'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
              // Permission to execute
-                sh "chmod +x -R ${env.WORKSPACE}/${env.JOB_NAME}@script"
+                sh "chmod +x -R /home/ec2-user/"
 
                 // Call SH
-                sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/script.sh"
-                sh './home/ec2-user/biuld.sh'
+                //sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/script.sh"
+                
+                sh '/home/ec2-user/biuld.sh'
                 echo "Building from RT..."
             }
         }

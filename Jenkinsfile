@@ -14,7 +14,7 @@ pipeline {
                 // Call SH
                 //sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/script.sh"
                 
-                sh '/home/ec2-user/scripts/biuld.sh'
+                sh 'bash ./home/ec2-user/scripts/biuld.sh'
                 echo "Building from RT..."
             }
         }
